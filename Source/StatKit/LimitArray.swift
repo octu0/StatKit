@@ -2,8 +2,6 @@ import Foundation
 
 public class LimitArray {
 
-    private static let gamma: Double = 0.6745
-
     private var values: [Int] = []
     private let limit: Int
 
