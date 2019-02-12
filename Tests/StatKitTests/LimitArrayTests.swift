@@ -9,6 +9,23 @@ class LimitArrayTests: XCTestCase {
     override func tearDown() {
     }
 
+    func testHoge(){
+        let arr = LimitArray(3)
+        arr.append(1)
+        arr.append(2)
+        arr.append(2)
+        arr.append(4)
+
+        print("average = \(arr.mean())")
+        print("median = \(arr.median())")
+        print("mode = \(arr.mode())")
+        print("p95 = \(arr.percentile(95))")
+        print("variance = \(arr.variance())")
+        print("stddev = \(arr.standardDeviation())")
+        print("rmse = \(arr.rmse())")
+        print("rmsere = \(arr.rmseRelativeError())")
+    }
+
     func testSum() {
         let a = LimitArray(4)
         a.append(1)
@@ -54,7 +71,7 @@ class LimitArrayTests: XCTestCase {
         a1.append(3)
         a1.append(2)
 
-        XCTAssertEqual(a1.mean(), 2.5)
+        XCTAssertEqual(a1.median(), 2.5)
 
         let a2 = LimitArray(5)
         a2.append(5)
@@ -63,7 +80,7 @@ class LimitArrayTests: XCTestCase {
         a2.append(4)
         a2.append(1)
 
-        XCTAssertEqual(a2.mean(), 3.0)
+        XCTAssertEqual(a2.median(), 3.0)
     }
 
     func testVarianceSquares() {
