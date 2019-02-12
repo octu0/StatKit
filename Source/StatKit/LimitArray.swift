@@ -10,8 +10,8 @@ public class LimitArray {
     }
 
     init(_ limit: Int, _ values: [Int]) {
-      self.limit = limit
-      self.values = values
+        self.limit = limit
+        self.values = values
     }
 
     func append(_ data: Int) {
@@ -106,7 +106,7 @@ public class LimitArray {
     }
 
     func rmseRelativeError() -> Double {
-      // RMSE relative error
-      return (rmse() / mean()) * 100.0
+        // RMSE relative error
+        return (rmse() / mean()) * 100.0
     }
 }
