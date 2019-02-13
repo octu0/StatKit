@@ -86,9 +86,8 @@ public class LimitArray {
 
     func variance() -> Double {
         let squares = varianceSquares()
-        var sum = 0.0
-        for v in squares {
-            sum += v
+        let sum = squares.reduce(0.0) { (previous, current) -> Double in
+            previous + current
         }
         return sum / Double(squares.count - 1)
     }
